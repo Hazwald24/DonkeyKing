@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     
     public float moveSpeed;
     public float jumpForce;
+    public float climbSpeed;
     Rigidbody2D rb;
 
     bool isGrounded = false;
@@ -17,8 +18,14 @@ public class PlayerMovement : MonoBehaviour
     public float rememberGroundFor;
     float lastTimeGrounded;
 
+    public float distance;
+    public LayerMask whatIsLadder;
+    private bool isClimbing;
+
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+
+
 
     void Start()
     {
@@ -30,12 +37,13 @@ public class PlayerMovement : MonoBehaviour
         CheckIfGrounded();
         Move();
         Jump();
+        Climb();
     }
    
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float moveBy = x * moveSpeed;
+        float inputHorizontal = Input.GetAxisRaw("Horizontal");
+        float moveBy = inputHorizontal * moveSpeed;
         rb.velocity = new Vector2(moveBy, rb.velocity.y);
     }
 
@@ -44,6 +52,34 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundFor))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+    }
+
+    void Climb()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsLadder);
+        if(hitInfo.collider != null)
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                isClimbing = true;
+            }
+        }
+        else
+        {
+            isClimbing = false;
+        }
+
+        if(isClimbing == true)
+        {
+            float inputVertical = Input.GetAxisRaw("Vertical");
+            float climbBy = inputVertical * climbSpeed;
+            rb.velocity = new Vector2(rb.velocity.x, climbBy);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 5;
         }
     }
 
