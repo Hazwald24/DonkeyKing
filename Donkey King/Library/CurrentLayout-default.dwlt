@@ -139,8 +139,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 708, y: 321}
-  m_MaxSize: {x: 18004, y: 10021}
+  m_MinSize: {x: 707, y: 321}
+  m_MaxSize: {x: 18003, y: 10021}
   vertical: 0
   controlID: 16
 --- !u!114 &7
@@ -244,8 +244,8 @@ MonoBehaviour:
     y: 0
     width: 450
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -431,9 +431,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.2502725
+    m_Target: 5.5120773
     speed: 2
-    m_Value: 3.2502725
+    m_Value: 5.5120773
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14532
+  m_LastSelectedObjectID: 14564
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -709,7 +709,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 9a2c0000
     m_LastClickedID: 11418
-    m_ExpandedIDs: 00000000283900002a3900002c3900002e390000
+    m_ExpandedIDs: 00000000fe3800005039000052390000543900005639000058390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -737,21 +737,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000283900002a3900002c3900002e3900005c390000843e0000
+    m_ExpandedIDs: ffffffff00000000fe3800005039000052390000543900005639000058390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Environment (1)
-      m_OriginalName: Environment (1)
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 16004
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
