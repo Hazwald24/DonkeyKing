@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7327150712652905162}
   - component: {fileID: 4056665804160046718}
   - component: {fileID: 788321556994119578}
-  - component: {fileID: -4197815374714125408}
   m_Layer: 0
   m_Name: haybails
   m_TagString: haybails
@@ -136,24 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isbeingpushed: 1
-  speed: 2
---- !u!249 &-4197815374714125408
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650554513962771761}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 1
-  m_ForceAngle: -5
-  m_ForceMagnitude: 15
-  m_ForceVariation: 0
-  m_ForceTarget: 1
-  m_Drag: 0
-  m_AngularDrag: 0
+  speed: 5
