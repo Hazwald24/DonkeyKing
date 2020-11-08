@@ -36,23 +36,25 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckIfGrounded();
         Move();
-        Jump();
         Climb();
     }
    
     void Move()
     {
-        float inputHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveBy = inputHorizontal * moveSpeed;
-        rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        Vector3 movement = new Vector3(Input.acceleration.x, 0f, 0f);
+        rb.velocity = movement * moveSpeed;
     }
 
-    void Jump()
+    public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundFor))
+        /*if (Input.GetMouseButtonDown(0) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundFor))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        }
+            if (Input.touches[0].phase == TouchPhase.Began)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            }
+        }*/
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     void Climb()
