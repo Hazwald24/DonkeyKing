@@ -16,6 +16,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
+    Unity.DeviceSimulator.Editor.dll:
+    - Unity.DeviceSimulator.SimulatorWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -31,11 +33,6 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
-    - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -67,23 +64,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
-    - Class: 114
       Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11466}
-    - Class: 114
       Script: {instanceID: 11468}
-    - Class: 114
-      Script: {instanceID: 11522}
     - Class: 114
       Script: {instanceID: 12202}
     - Class: 114
       Script: {instanceID: 12350}
-    - Class: 114
-      Script: {instanceID: 12928}
-    - Class: 114
-      Script: {instanceID: 13706}
     - Class: 114
       Script: {instanceID: 13920}
     - Class: 114
@@ -92,8 +79,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14344}
     - Class: 115
       Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
@@ -101,14 +86,6 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 249
       Script: {instanceID: 0}
     - Class: 251
       Script: {instanceID: 0}

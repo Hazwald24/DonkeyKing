@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckIfGrounded();
         Move();
+        Jump();
         Climb();
     }
    
@@ -47,14 +48,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        /*if (Input.GetMouseButtonDown(0) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundFor))
+        if (Input.touchCount > 0 && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundFor))
         {
-            if (Input.touches[0].phase == TouchPhase.Began)
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             }
-        }*/
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
+        //rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     void Climb()
